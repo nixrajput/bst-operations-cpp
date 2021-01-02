@@ -78,29 +78,33 @@ int main()
             break;
         case 3:
             cout<<"\n\t\t Inorder Traversal of BST:"<<endl;
+            cout<<"\n\t\t";
             bst.inorder(root);
-            cout<<endl;
+            cout<<"\n\n";
             system("pause");
             system("cls");
             break;
         case 4:
-            cout<<"\n\t\t tPreorder Traversal of BST:"<<endl;
+            cout<<"\n\t\t Preorder Traversal of BST:"<<endl;
+            cout<<"\n\t\t";
             bst.preorder(root);
-            cout<<endl;
+            cout<<"\n\n";
             system("pause");
             system("cls");
             break;
         case 5:
             cout<<"\n\t\t Postorder Traversal of BST:"<<endl;
+            cout<<"\n\t\t";
             bst.postorder(root);
-            cout<<endl;
+            cout<<"\n\n";
             system("pause");
             system("cls");
             break;
         case 6:
             cout<<"\n\t\t Display BST:"<<endl;
+            cout<<"\n\t\t";
             bst.display(root,1);
-            cout<<endl;
+            cout<<"\n\n";
             system("pause");
             system("cls");
             break;
@@ -369,6 +373,11 @@ void BST::postorder(node *ptr)
 void BST::display(node *ptr, int level)
 {
     int i;
+    if (root == NULL)
+    {
+        cout<<"\n\t\t Tree is empty...!!"<<endl;
+        return;
+    }
     if (ptr != NULL)
     {
         display(ptr->right, level+1);
